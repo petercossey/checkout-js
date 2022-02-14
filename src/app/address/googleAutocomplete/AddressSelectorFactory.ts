@@ -1,4 +1,5 @@
 import AddressSelector from './AddressSelector';
+import AddressSelectorNZ from './AddressSelectorNz';
 import AddressSelectorUK from './AddressSelectorUk';
 
 export default class AddressSelectorFactory {
@@ -8,6 +9,9 @@ export default class AddressSelectorFactory {
         switch (addressSelector.getCountry()) {
         case 'GB':
             return new AddressSelectorUK(autocompleteData);
+
+        case 'NZ':
+            return new AddressSelectorNZ(autocompleteData);
         }
 
         return addressSelector;
