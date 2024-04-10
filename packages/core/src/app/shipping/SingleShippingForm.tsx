@@ -361,6 +361,6 @@ export default withLanguage(
                           }),
                       ),
                   }),
-        enableReinitialize: false,
+        enableReinitialize: true,
     })(SingleShippingForm),
 );

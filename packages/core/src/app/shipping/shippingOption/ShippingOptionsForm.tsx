@@ -182,6 +182,7 @@ export interface ShippingOptionsFormValues {
 
 export default withAnalytics(withFormik<ShippingOptionsFormProps, ShippingOptionsFormValues>({
     handleSubmit: noop,
+    enableReinitialize: true,
     mapPropsToValues({ consignments }) {
         const shippingOptionIds: { [id: string]: string } = {};
 
